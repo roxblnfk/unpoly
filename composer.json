@@ -1,0 +1,27 @@
+{
+    "name": "roxblnfk/unpoly",
+    "type": "metapackage",
+    "license": "MIT",
+    "description": "Remove unnecessary PHP polyfills",
+    "keywords": [
+        "cleaning", "polyfill", "php", "polyfill-php"
+    ],
+    "authors": [
+        {
+            "name": "Aleksei Gagarin (roxblnfk)",
+            "homepage": "https://github.com/roxblnfk"
+        }
+    ],
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://patreon.com/roxblnfk"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "replace": {
+        "symfony/polyfill-php56": "*"
+    }
+}

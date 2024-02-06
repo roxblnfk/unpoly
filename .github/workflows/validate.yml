@@ -1,0 +1,36 @@
+name: Unit
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+      - '.gitattributes'
+      - '.editorconfig'
+
+  push:
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+      - '.gitattributes'
+      - '.editorconfig'
+
+jobs:
+  test:
+    name: Validate composer.json
+    runs-on: ubuntu-latest
+    env: { GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}' }
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: latest
+          tools: composer:v2
+
+      - name: Check Out Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
