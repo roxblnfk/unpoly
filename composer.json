@@ -28,7 +28,6 @@
         "symfony/polyfill-php73": "*",
         "symfony/polyfill-php72": "*",
         "symfony/polyfill-php71": "*",
-        "symfony/polyfill-php70": "*",
-        "symfony/polyfill-php56": "*"
+        "symfony/polyfill-php70": "*"
     }
 }
