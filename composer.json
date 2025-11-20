@@ -24,6 +24,7 @@
     "replace": {
         "symfony/polyfill-php84": "*",
         "symfony/polyfill-php83": "*",
-        "symfony/polyfill-php82": "*"
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php81": "*"
     }
 }
