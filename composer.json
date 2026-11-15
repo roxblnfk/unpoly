@@ -19,9 +19,10 @@
         }
     ],
     "require": {
-        "php": ">=8.5"
+        "php": ">=8.6"
     },
     "replace": {
+        "symfony/polyfill-php86": "*",
         "symfony/polyfill-php85": "*",
         "symfony/polyfill-php84": "*",
         "symfony/polyfill-php83": "*",
