@@ -1,5 +1,13 @@
+# Line-ending normalization for text files.
 * text=auto
 
-/.github       export-ignore
-/tests         export-ignore
-/.*            export-ignore
+# List-like manifests: concurrent additions to the same list merge instead of conflicting.
+/composer.json merge=union
+
+# Default: nothing goes into the dist archive. Re-include only what the installed package needs.
+* export-ignore
+
+# Manifest and top-level documentation.
+/composer.json   -export-ignore
+/LICENSE         -export-ignore
+/README.md       -export-ignore
