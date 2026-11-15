@@ -9,28 +9,40 @@ on:
       - '.editorconfig'
 
   push:
+    branches: [master]
+    tags: ['*']
     paths-ignore:
       - 'README.md'
       - '.gitignore'
       - '.gitattributes'
       - '.editorconfig'
 
+# Cancel superseded runs of the same PR; pushes to master and tags keep every run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Validate composer.json
     runs-on: ubuntu-latest
-    env: { GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}' }
+    timeout-minutes: 4
     steps:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: latest
           tools: composer:v2
+          coverage: none
 
       - name: Check Out Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
+          persist-credentials: false
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate --strict
+      - name: Validate composer.json
+        run: composer validate --strict --ansi
