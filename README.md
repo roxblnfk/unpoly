@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Sponsor](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Patreon&logo=patreon&logoColor=white&color=%23F96854)](https://patreon.com/roxblnfk)
+[![Sponsor](https://img.shields.io/static/v1?style=for-the-badge&label=&message=Boosty&logo=boosty&logoColor=white&color=%23F15F2C)](https://boosty.to/roxblnfk)
 
 </div>
 
