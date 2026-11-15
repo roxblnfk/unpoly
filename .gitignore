@@ -2,6 +2,7 @@
 !/.github/
 /runtime/
 /vendor/
-/composer.lock
+/tools/*/vendor/
+/tools/*/composer.lock
 /.env
 *.log
