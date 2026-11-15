@@ -22,6 +22,7 @@
         "php": ">=8.6"
     },
     "replace": {
-        "symfony/polyfill-php86": "*"
+        "symfony/polyfill-php86": "*",
+        "symfony/polyfill-php85": "*"
     }
 }
